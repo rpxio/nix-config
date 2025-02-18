@@ -8,8 +8,12 @@
   wsl.enable = true;
   wsl.defaultUser = "rndll";
 
-  environment.systemPackages = [
-    pkgs.linuxPackages.usbip
+  environment.systemPackages = with pkgs; [
+    azure-cli
+    azure-functions-core-tools
+    opentofu
+    tenv
+    linuxPackages.usbip
   ];
 
   networking = {
