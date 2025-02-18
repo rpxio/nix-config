@@ -7,16 +7,13 @@
 {
   nix.settings.trusted-users = [ "rndll" ];
 
-  age.secrets.hashedUserPassword = {
-    file = "${inputs.secrets}/hashedUserPassword.age";
-  };
-
   users = {
     users = {
       rndll = {
         shell = pkgs.fish;
 	uid = 1000;
 	isNormalUser = true;
+	initialPassword = "test123";
         extraGroups = [
           "wheel"
 	  "users"

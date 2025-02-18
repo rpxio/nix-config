@@ -26,12 +26,6 @@
 
   time.timeZone = "US/Chicago";
 
-  users.users = {
-    root = {
-      initialHashedPassword = config.age.secrets.hashedUserPassword.path;
-    };
-  };
-
   services.openssh = {
     enable = lib.mkDefault true;
   };

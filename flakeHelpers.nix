@@ -33,7 +33,6 @@ in
       modules = [
         ./machines/nixos/_common
 	./machines/nixos/${machineHostname}
-	"${inputs.secrets}/default.nix"
 	inputs.agenix.nixosModules.default
 	./users/rndll
 	(homeManagerCfg false [ ])
